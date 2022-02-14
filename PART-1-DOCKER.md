@@ -119,45 +119,45 @@ Hands-on practice quest #00: prerequisites sound-check (15+5)
 ``` 
 
 - [ ] When участники *именуют сценарии*, выполняют команды и анализируют их вывод и поведение
-- Сценарий "Как ...?"
+- Сценарий "Как проверить что докер ?"
 ```shell
 docker version # TODO: собственные пометки участников для будущего использования в проектах
 docker system info
 docker system df
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как залогиниться в артифактори?"
 ```shell
 docker logout
-docker login {{ registry-host }}
+docker login artifactory.raiffeisen.ru
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как скачать проект?"
 ```shell
-docker image pull {{ os-registry }}/alpine:3.14
+docker image pull artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 docker system df
 ````
 
-- Сценарий "Как ...?"
+- Сценарий "Как запустить контейнер?"
 ```shell
 docker container ls [--all]
-docker container run --name demo -it {{ os-registry }}/alpine:3.14
+docker container run --name demo -it artifactory.raiffeisen.ru/ext-rbru-osimage-docker/alpine:3.14
 /# cat /etc/os-release
 /# exit 
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как удалить контейнер?"
 ```shell
 docker container ls [--all]
 docker container rm [--force] demo
 ```
 
 - [ ] Then участники делятся проблемами и отвечают на вопросы
-- Как проименовали сценарии?
-- Успешна ли сконфигурирована система для использования docker?
-- Какая версия API?
-- Откуда взялся образ диска?
-- Сколько места занимает образ?
+- Как проименовали сценарии? Проверка Docker
+- Успешна ли сконфигурирована система для использования docker? Да
+- Какая версия API? 1.41
+- Откуда взялся образ диска? из артифактори
+- Сколько места занимает образ? 5.855MB
 - Сколько места занимает контейнер?
 - Какая версия образа скачивается по умолчанию?
 - Какая гостевая команда запускается при запуске контейнера? 
